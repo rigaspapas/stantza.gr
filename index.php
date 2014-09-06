@@ -56,12 +56,7 @@
 		</div>
 		<div id="main">
 			<div id="banner">
-				<?php
-					$t = rand( 1, 10 );
-					echo '<li>';
-					echo '<img alt="Shop photo" src="shop/'.$t.'.JPG" /> ';
-					echo '</li>';
-				?>
+				<img alt="Shop photo" src="shop/4.JPG" />
 			</div>
 			<div id="content">
 				<?php
