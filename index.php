@@ -1,0 +1,110 @@
+<?php
+	if (!isset( $_GET['p'] )) $p = 'home';
+	else
+		switch( $_GET['p'] ) {
+			case 'samples':
+				$p = 'samples';
+				break;
+			case 'shop':
+				$p = 'shop';
+				break;
+			case 'clients':
+				$p = 'clients';
+				break;
+			case 'contact':
+				$p = 'contact';
+				break;
+			default:
+				$p = 'home';
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Στάντζα | ειδικά κοπτικά</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Στάντζα , ειδικά κοπτικά" />
+		<link rel="stylesheet" type="text/css" href="./main.css" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36179329-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+	</head>
+	
+	<body>
+		<div id="left">
+			<div id="logo">
+				<h1>Στάντζα</h1>
+				<div>ειδικά κοπτικά</div>
+			</div>
+			<div id="menu">
+				<ul id="nav">
+					<li <?php if ($p == 'home') echo 'class="selected" ';?>>
+						<a href="?p=home">Αρχική</a>
+					</li>
+					<li <?php if ($p == 'samples') echo 'class="selected" ';?>>
+						<a href="?p=samples">Προϊόντα</a>
+					</li>
+					<li <?php if ($p == 'shop') echo 'class="selected" ';?>>
+						<a href="?p=shop">Ο χώρος</a>
+					</li>
+					<li <?php if ($p == 'clients') echo 'class="selected" ';?>>
+						<a href="?p=clients">Πελατολόγιο</a>
+					</li>
+					<li <?php if ($p == 'contact') echo 'class="selected" ';?>>
+						<a href="?p=contact">Επικοινωνία</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<div id="banner">
+				<h2>Ρίξτε μια ματιά</h2>
+				<ul id="slide">
+					<?php
+						for ($i=1; $i<=5; $i++) {
+							$t = rand( 2*$i - 1 , 2*$i );
+							echo '<li>';
+							echo '<img alt="shopImage'.$t.'" src="shop/'.$t.'-th2.JPG" /> ';
+							echo '</li>';
+						}
+					?>
+				</ul>
+			</div>
+			<div id="content">
+				<?php
+					if ( $p == 'samples' ) include 'samples.php';
+					else if ( $p == 'shop' ) include 'shop.php';
+					else if ( $p == 'contact' ) include 'contact.php';
+					else if ( $p == 'clients' ) include 'clients.php';
+					else include 'home.php';
+				?>
+			</div>
+		</div>
+		
+		<div id="makeprev"></div>
+		<div id="outerprev">
+			<div id="innerprev">
+				<div id="closebutton">
+					<img onclick="prevclose();" alt="close" src="images/close.png" />
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="stantza.js"></script>
+		<script type="text/javascript" src="keys.js"></script>
+	</body>
+</html>
