@@ -69,7 +69,7 @@
 			</div>
 		</div>
 		
-		<div id="makeprev"></div>
+		<div id="black-overlay"></div>
 		<div id="outerprev">
 			<div id="innerprev">
 				<div id="closebutton">

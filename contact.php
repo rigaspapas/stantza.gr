@@ -1,29 +1,31 @@
 <div id="contact">
-	<div id="cup">
-		<div id="cleft">
-			<h3>Διεύθυνση</h3>
-			<div>
-				Καΐρη 13,</br>
-				Περιστέρι,</br>
-				ΤΚ: 12131,</br>
-				Αθήνα</br>
-			</div>		
-		</div>
-		
-		<div id="cright">
-			<h3>Τηλέφωνα</h3>
-			<div>
-				Ζορμπάς Νίκος
-				
-				<small>Κινητό</small>
-				<div class="telephone">6973795503</div>
-				<small>Σταθερό</small>
-				<div class="telephone">210 5786398</div>
-				<small>Fax</small>
-				<div class="telephone">210 5786247</div>
-				<small>E-mail</small>
-				<div class="email"><a href="mailto:zorbnik@otenet.gr">zorbnik@otenet.gr</a></div>
-			</div>
+	<div id="cleft">
+		<h3>Διεύθυνση</h3>
+		<div class="details">
+			Καΐρη 13,</br>
+			Περιστέρι,</br>
+			ΤΚ: 12131,</br>
+			Αθήνα</br>
+		</div>		
+	</div>
+	
+	<div id="cright">
+		<h3>Τηλέφωνα</h3>
+		<div class="details">
+			Ζορμπάς Νίκος
+			
+			<dl>
+				<dt>Κινητό</dt>
+				<dd class="telephone">6973795503</dd>
+				<dt>Σταθερό</dt>
+				<dd class="telephone">210 5786398</dd>
+				<dt>Fax</dt>
+				<dd class="telephone">210 5786247</dd>
+				<dt>E-mail</dt>
+				<dd class="email">
+					<a href="mailto:zorbnik@otenet.gr">zorbnik@otenet.gr</a>
+				</dd>
+			</dl>
 		</div>
 	</div>
 	
