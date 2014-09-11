@@ -154,7 +154,7 @@ h1 {
 	margin-left: 14em;
 }
 #banner {
-	height: 7em;
+	min-height: 6em;
 	overflow: hidden;
 	position: relative;
 	
@@ -167,13 +167,19 @@ h1 {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		box-shadow: inset 0 -1.2em 7em rgba( 0,0,0,0.6 );
+		box-shadow: inset 0 -1.5em 7em rgba( 0,0,0,0.6 );
+		z-index: -1;
 	}
 	
 	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 		width: 100%;
 		height: auto;
 		min-height: 100%;
+		z-index: -2;
 	}
 }
 #content {
@@ -181,12 +187,13 @@ h1 {
 	padding: 5px 6%;
 }
 h2 {
-	margin: 0.3em 0;
-	padding: 0.3em 0;
-	border-bottom: 1px #777 dotted;
-	font-size: 1.6em;
+	margin: 0 4%;
+	padding: 0.3em;
+	font-size: 2em;
+	line-height: 1.6em;
 	font-weight: 700;
-	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 1px 1px 1px #000;
+	color: #fff;
 }
 h3 {
 	margin: 0.2em 0;
@@ -457,6 +464,8 @@ dd {
 @media screen and (max-width: 900px) {
 	body { font-size: 15px; }
 	
+	h2 { font-size: 1.8em; }
+	
 	ul.samplesul {
 		width: 94%;
 	}
@@ -470,6 +479,8 @@ dd {
 /* < 750px */
 @media screen and (max-width: 750px) {
 	body { font-size: 14px; }
+	
+	h2 { font-size: 1.6em; font-weight: 400; }
 	
 	ul.column {
 		margin: 0 2%;
@@ -489,6 +500,11 @@ dd {
 @media screen and (max-width: 500px) {
 	body { font-size: 12px; }
 
+	h2 { font-size: 1.3em; font-weight: 300; }
+	
 	.shopblock > img { width: 50%; }
+	
+	#left { width: 8em; }
+	#main { margin-left: 8em; }
 }
 @media screen and (max-width: 400px) { body { font-size: 11px; } }

@@ -1,4 +1,6 @@
 <?php
+	header("Content-type: text/html; charset=UTF-8");
+
 	if (!isset( $_GET['p'] )) $p = 'home';
 	else {
 		switch( $_GET['p'] ) {
@@ -25,6 +27,7 @@
 		<title>Στάντζα | ειδικά κοπτικά</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="Στάντζα , ειδικά κοπτικά" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,greek' rel='stylesheet' type='text/css'>		
@@ -56,6 +59,7 @@
 		</div>
 		<div id="main">
 			<div id="banner">
+				<h2>Εργαστήρι κοπής και διαμόρφωσης προϊόντων γραφικών τεχνών και μεταξοτυπίας</h2>
 				<img alt="Shop photo" src="shop/4.JPG" />
 			</div>
 			<div id="content">
