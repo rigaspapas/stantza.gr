@@ -1,4 +1,4 @@
-<div id="shop">
+<div id="shop" class="section">
 	<h3>Φωτογραφίες του χώρου</h3>
 	<div class="shopblock">
 		<?php

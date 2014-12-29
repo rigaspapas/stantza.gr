@@ -34,12 +34,12 @@
 	</head>
 	
 	<body>
-		<div id="left">
+		<div id="header">
 			<div id="logo">
 				<h1>Στάντζα</h1>
 				<div id="moto">ειδικά κοπτικά</div>
 			</div>
-			<ul id="navigator">
+			<ul id="menu">
 				<li <?php if ($p == 'home') echo 'class="selected" ';?>>
 					<a href="?p=home">Αρχική</a>
 				</li>
@@ -57,21 +57,13 @@
 				</li>
 			</ul>
 		</div>
-		<div id="main">
-			<div id="banner">
-				<h2>Εργαστήρι κοπής και διαμόρφωσης προϊόντων γραφικών τεχνών και μεταξοτυπίας</h2>
-				<img alt="Shop photo" src="shop/4.JPG" />
-			</div>
-			<div id="content">
-				<?php
-					if ( $p == 'samples' ) include 'samples.php';
-					else if ( $p == 'shop' ) include 'shop.php';
-					else if ( $p == 'contact' ) include 'contact.php';
-					else if ( $p == 'clients' ) include 'clients.php';
-					else include 'home.php';
-				?>
-			</div>
-		</div>
+        <?php
+            if ( $p == 'samples' ) include 'samples.php';
+            else if ( $p == 'shop' ) include 'shop.php';
+            else if ( $p == 'contact' ) include 'contact.php';
+            else if ( $p == 'clients' ) include 'clients.php';
+            else include 'home.php';
+        ?>
 		
 		<div id="black-overlay"></div>
 		<div id="outerprev">

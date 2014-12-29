@@ -1,4 +1,4 @@
-<ul id="clients">
+<ul id="clients" class="section">
 	<li>Εκδόσεις Κέδρος</li>
 	<li>Βιβλιοπωλεία Παπασωτηρίου</li>
 	<li>Ιατρικές εκδόσεις Παρισιάνου</li>

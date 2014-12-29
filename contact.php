@@ -1,4 +1,4 @@
-<div id="contact">
+<div id="contact" class="section">
 	<div id="cleft">
 		<h3>Διεύθυνση</h3>
 		<div class="details">

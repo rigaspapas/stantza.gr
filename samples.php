@@ -1,4 +1,4 @@
-<div id="samples">
+<div id="samples" class="section">
 	<div class="tip">
 		<strong>Tip:</strong> &nbsp;Κάντε κλικ στις κατηγορίες για να δείτε φωτογραφίες από τα δείγματα. Κάντε κλικ στα δείγματα, για να δείτε τις εικόνες σε πλήρες μέγεθος. <span class="close">Κλείσιμο βοήθειας</span>
 	</div>
