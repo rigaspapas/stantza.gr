@@ -68,7 +68,7 @@
 		</li>
 	</ul>
 	
-	<a id="gotosamples" href="?p=samples">Δείτε φωτογραφίες των προϊόντων <span>»</span></a>
+	<a id="gotosamples" href="?p=samples">Δείτε φωτογραφίες των προϊόντων <span>&raquo;</span></a>
 
 	<h3>Τι υλικά χρησιμοποιούμε</h3>
 	<ul class="sub big">

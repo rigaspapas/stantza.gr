@@ -65,6 +65,10 @@
             else include 'home.php';
         ?>
 		
+        <div id="footer">
+            Developed by <a href="http://www.rigaspapas.com">Rigas Papas</a>.
+        </div>
+        
 		<div id="black-overlay"></div>
 		<div id="outerprev">
 			<div id="innerprev">
