@@ -16,6 +16,12 @@ LESS FUNCTIONS
 		 -o-transition: ~'all @{time}s ease-out'; 
 			transition: ~'all @{time}s ease-out'; 
 }
+.transition-specific( @property, @time ) {
+	-webkit-transition: ~'@property @{time}s ease-out'; 
+	   -moz-transition: ~'@property @{time}s ease-out'; 
+		 -o-transition: ~'@property @{time}s ease-out'; 
+			transition: ~'@property @{time}s ease-out'; 
+}
 .border-box {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -104,7 +110,7 @@ h1 {
         display: inline-block;
 		line-height: 2.2em;
 		margin: 1.5em;
-		.transition( 0.2 );
+		.transition-specific( 'color', 0.2 );
 		
         > a { display: inline-block; }
         
@@ -147,7 +153,6 @@ h3 {
 	line-height: 1.6em;
 	text-shadow: 1px 1px 1px #fff;
     border-bottom: 1px solid #888;
-    border-top: 0.1em solid;
 }
 ul.big {
     font-size: 1.3em;
@@ -223,20 +228,16 @@ ul.sub {
 
 /* Samples */
 .samplecontainer {
-	display: none;
 	overflow: hidden;
 	
 	padding: 5px;
-	text-align: justify;
-	
-	background: rgba(0,0,0,0.2);
-	border-bottom: 3px double #000;
-	
+	text-align: justify;	
+    
 	> img {
-		height: auto;
+        height: auto;
 		width: auto;
-		max-height: 100px;
-		max-width: 120px;
+		max-height: 50px;
+		max-width: 60px;
 		
 		cursor: pointer;
 		
@@ -245,8 +246,7 @@ ul.sub {
 }
 ul.samplesul {
 	list-style-type: none;
-	float: left;
-	width: 48%;
+	width: 98%;
 	padding: 0;
 	margin: 0 1%;
 
@@ -255,25 +255,15 @@ ul.samplesul {
 		margin: 0;
 
 		> h3 {
-            font-size: 1.4em;
+            font-size: 1.1em;
 			cursor: pointer;
 			margin: 0.4em 0 0 0;
-            border-top: none;
-			border-bottom: 3px double #000;
 			.transition( 0.2 );
-            
-            &:before {
-                content: '+';
-                margin: 0 0.4em 0 0.2em;
-            }
-			&.expanded:before { content: '-'; }
-			&:hover { color: darken( @orange, 5% ); }
 		}
 	}
 }
 
 #contact h3 {
-    border-top: none;
 	border-bottom: 2px dotted;
 }
 
@@ -285,7 +275,7 @@ ul.samplesul {
 		float: left;
 		height: auto;
 		width: 20%;
-		padding: 0 1%;
+		padding: 1px;
 		.border-box;
 	}
 }
