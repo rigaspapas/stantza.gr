@@ -58,8 +58,10 @@
 			</ul>
 		</div>
         
+        
         <!-- Main page content -->
         <div id="page-content" ng-view onload="page.loaded()"></div>
+        
         
         <div id="footer">
             Developed by <a href="http://www.rigaspapas.com">Rigas Papas</a>.

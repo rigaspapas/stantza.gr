@@ -17,10 +17,10 @@ LESS FUNCTIONS
 			transition: ~'all @{time}s ease-out'; 
 }
 .transition-specific( @property, @time ) {
-	-webkit-transition: ~'@property @{time}s ease-out'; 
-	   -moz-transition: ~'@property @{time}s ease-out'; 
-		 -o-transition: ~'@property @{time}s ease-out'; 
-			transition: ~'@property @{time}s ease-out'; 
+	-webkit-transition: ~'@{property} @{time}s ease-out'; 
+	   -moz-transition: ~'@{property} @{time}s ease-out'; 
+		 -o-transition: ~'@{property} @{time}s ease-out'; 
+			transition: ~'@{property} @{time}s ease-out'; 
 }
 .border-box {
 	-webkit-box-sizing: border-box;
@@ -43,7 +43,7 @@ body {
 	font-family: 'Roboto Slab',serif;
 	word-break: break-word;
 	
-	background: #d8d8d8 url('../images/pattern-light.png') repeat top left;
+	background-color: #d8d8d8;
 }
 
 a {
@@ -110,7 +110,7 @@ h1 {
         display: inline-block;
 		line-height: 2.2em;
 		margin: 1.5em;
-		.transition-specific( 'color', 0.2 );
+		.transition-specific( 'color', 0.4 );
 		
         > a { display: inline-block; }
         
@@ -125,6 +125,17 @@ h1 {
 		}
 	}
 }
+
+#page-content {
+    &.ng-enter {
+        .transition( 0.5 );
+        .opacity( 0 );
+    }
+    &.ng-enter.ng-enter-active {
+        .opacity( 1 );
+    }
+}
+
 #banner {
 	padding: 1.5em 1em;
     text-align: center;
@@ -238,6 +249,7 @@ ul.sub {
 		width: auto;
 		max-height: 50px;
 		max-width: 60px;
+        margin-right: 5px;
 		
 		cursor: pointer;
 		
@@ -349,7 +361,7 @@ dd {
     .transition( 0.5 );
     
     &.hidden {
-        display: none;
+        z-index: -1;
         .opacity( 0 );
     }
 }
@@ -361,25 +373,38 @@ dd {
 #outerprev {
 	min-height: 50px;
 	.border-box;
-	padding: 0 12px;
+	padding: 15px 10px 0 10px;
 	z-index: 3;
 	text-align: center;
     .opacity( 1.0 );
+    
+    &.hidden {
+        top: 50%;
+        right: 50%;
+        bottom: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        
+        img {
+            width: 0;
+            height: 0;
+        }
+    }
 }
 #innerprev {
 	display: inline-block;
-	border: 1px #444 dashed;
 	max-width: 100%;
 	max-height: 100%;
-	margin: 20px auto;
+	margin: 0 auto;
 	padding: 2px;
 	.border-box;
-	background-color: #eee;
+	background-color: #fff;
 	position: relative;
 	.transition( 0.2 );
 	
 	> img {
-		float: left;
+        display: block;
 		width: auto;
 		height: auto;
 		max-width: 100%;
