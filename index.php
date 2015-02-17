@@ -33,38 +33,34 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,greek' rel='stylesheet' type='text/css'>		
 	</head>
 	
-	<body>
+	<body ng-app="stantza" ng-controller="pageController as page">
 		<div id="header">
 			<div id="logo">
 				<h1>Στάντζα</h1>
 				<div id="moto">ειδικά κοπτικά</div>
 			</div>
 			<ul id="menu">
-				<li <?php if ($p == 'home') echo 'class="selected" ';?>>
-					<a href="?p=home">Αρχική</a>
+				<li ng-class="{selected:page.location=='home'}">
+					<a href="#home" ng-click="page.location = 'home'">Αρχική</a>
 				</li>
-				<li <?php if ($p == 'samples') echo 'class="selected" ';?>>
-					<a href="?p=samples">Προϊόντα</a>
+				<li ng-class="{selected:page.location=='samples'}">
+					<a href="#samples" ng-click="page.location = 'samples'">Προϊόντα</a>
 				</li>
-				<li <?php if ($p == 'shop') echo 'class="selected" ';?>>
-					<a href="?p=shop">Ο χώρος</a>
+				<li ng-class="{selected:page.location=='shop'}">
+					<a href="#shop" ng-click="page.location = 'shop'">Ο χώρος</a>
 				</li>
-				<li <?php if ($p == 'clients') echo 'class="selected" ';?>>
-					<a href="?p=clients">Πελατολόγιο</a>
+				<li ng-class="{selected:page.location=='clients'}">
+					<a href="#clients" ng-click="page.location = 'clients'">Πελατολόγιο</a>
 				</li>
-				<li <?php if ($p == 'contact') echo 'class="selected" ';?>>
-					<a href="?p=contact">Επικοινωνία</a>
+				<li ng-class="{selected:page.location=='contact'}">
+					<a href="#contact" ng-click="page.location = 'contact'">Επικοινωνία</a>
 				</li>
 			</ul>
 		</div>
-        <?php
-            if ( $p == 'samples' ) include 'samples.php';
-            else if ( $p == 'shop' ) include 'shop.php';
-            else if ( $p == 'contact' ) include 'contact.php';
-            else if ( $p == 'clients' ) include 'clients.php';
-            else include 'home.php';
-        ?>
 		
+        <div id="page-content" ng-include="page.location + '.php'">
+        </div>
+        
         <div id="footer">
             Developed by <a href="http://www.rigaspapas.com">Rigas Papas</a>.
         </div>
@@ -91,7 +87,8 @@
 		  })();
 
 		</script>
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="js/stantza.js"></script>
 		<script type="text/javascript" src="js/keys.js"></script>
 	</body>
