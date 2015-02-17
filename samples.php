@@ -7,7 +7,7 @@
 		<li>
 			<h3>Κουτιά</h3>
 			<div class="samplecontainer">
-				<img height="100" width="120" alt="sample" src="samples/bluebox-thumb.png" />
+				<img height="100" width="120" alt="sample" ng-repeat="sample in ['bluebox','bluebox-open']" ng-src="{{'samples/' + sample + '-thumb.png'}}" />
 				<img height="100" width="120" alt="sample" src="samples/bluebox-open-thumb.png" />
 				<img height="100" width="120" alt="sample" src="samples/ccbox2-thumb.png" />
 				<img height="100" width="120" alt="sample" src="samples/ccbox1-thumb.png" />

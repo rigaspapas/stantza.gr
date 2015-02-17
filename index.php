@@ -33,40 +33,40 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,greek' rel='stylesheet' type='text/css'>		
 	</head>
 	
-	<body ng-app="stantza" ng-controller="pageController as page">
+	<body ng-app="stantza" ng-controller="pageCtrl as page">
 		<div id="header">
 			<div id="logo">
 				<h1>Στάντζα</h1>
 				<div id="moto">ειδικά κοπτικά</div>
 			</div>
 			<ul id="menu">
-				<li ng-class="{selected:page.location=='home'}">
-					<a href="#home" ng-click="page.location = 'home'">Αρχική</a>
+				<li ng-class="{selected:page.$path=='home'}">
+					<a href="#home" ng-click="page.setPage('home')">Αρχική</a>
 				</li>
-				<li ng-class="{selected:page.location=='samples'}">
-					<a href="#samples" ng-click="page.location = 'samples'">Προϊόντα</a>
+				<li ng-class="{selected:page.$path=='samples'}">
+					<a href="#samples" ng-click="page.setPage('samples')">Προϊόντα</a>
 				</li>
-				<li ng-class="{selected:page.location=='shop'}">
-					<a href="#shop" ng-click="page.location = 'shop'">Ο χώρος</a>
+				<li ng-class="{selected:page.$path=='shop'}">
+					<a href="#shop" ng-click="page.setPage('shop')">Ο χώρος</a>
 				</li>
-				<li ng-class="{selected:page.location=='clients'}">
-					<a href="#clients" ng-click="page.location = 'clients'">Πελατολόγιο</a>
+				<li ng-class="{selected:page.$path=='clients'}">
+					<a href="#clients" ng-click="page.setPage('clients')">Πελατολόγιο</a>
 				</li>
-				<li ng-class="{selected:page.location=='contact'}">
-					<a href="#contact" ng-click="page.location = 'contact'">Επικοινωνία</a>
+				<li ng-class="{selected:page.$path=='contact'}">
+					<a href="#contact" ng-click="page.setPage('contact')">Επικοινωνία</a>
 				</li>
 			</ul>
 		</div>
-		
-        <div id="page-content" ng-include="page.location + '.php'" onload="page.pageLoaded()">
-        </div>
+        
+        <!-- Main page content -->
+        <div id="page-content" ng-view onload="page.loaded()"></div>
         
         <div id="footer">
             Developed by <a href="http://www.rigaspapas.com">Rigas Papas</a>.
         </div>
         
-		<div id="black-overlay"></div>
-		<div id="outerprev">
+		<div id="black-overlay" class="hidden"></div>
+		<div id="outerprev" class="hidden">
 			<div id="innerprev">
 				<div id="closebutton">
 					<img onclick="prevclose();" alt="close" src="images/close.png" />
@@ -87,7 +87,9 @@
 		  })();
 
 		</script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular-route.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular-animate.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="js/stantza.js"></script>
 		<script type="text/javascript" src="js/keys.js"></script>
