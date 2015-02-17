@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module( 'stantza', [] );
     
-    app.controller( 'pageController', function ( $scope ) {
+    app.controller( 'pageController', function () {
         /* Default location */
         this.location = 'home';
         
@@ -13,7 +13,7 @@
             this.location = window.location.hash.substring(2);
     
         /* On-load functionality */
-        $scope.$on('$viewContentLoaded', function() {
+        this.pageLoaded = function () {            
              //Prefixes for the image preview
             $( '#black-overlay, #outerprev' ).click( gallery_close );
 
@@ -37,7 +37,7 @@
             $( '.close' ).click( function () {
                 $( '.tip' ).fadeOut( 1000 );
             } );
-        } );
+        };
     } );
     
 })();

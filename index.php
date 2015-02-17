@@ -58,7 +58,7 @@
 			</ul>
 		</div>
 		
-        <div id="page-content" ng-include="page.location + '.php'">
+        <div id="page-content" ng-include="page.location + '.php'" onload="page.pageLoaded()">
         </div>
         
         <div id="footer">
