@@ -1,28 +1,5 @@
-<?php
-	header("Content-type: text/html; charset=UTF-8");
-
-	if (!isset( $_GET['p'] )) $p = 'home';
-	else {
-		switch( $_GET['p'] ) {
-			case 'samples':
-				$p = 'samples';
-				break;
-			case 'shop':
-				$p = 'shop';
-				break;
-			case 'clients':
-				$p = 'clients';
-				break;
-			case 'contact':
-				$p = 'contact';
-				break;
-			default:
-				$p = 'home';
-		}
-	}
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
 		<title>Στάντζα | ειδικά κοπτικά</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
