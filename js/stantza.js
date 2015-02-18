@@ -24,7 +24,7 @@ angular.module( 'stantza', ['ngRoute', 'ngAnimate'] )
 ] )
 .controller( 'pageCtrl', [ '$location', '$scope',
     function( $location, $scope ) {
-        this.$path = $location.path().substring(1);
+        this.$path = $location.path().substring(1) || 'home';
         
         this.setPage = function ( page ) {
             this.$path = page;
