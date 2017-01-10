@@ -3,19 +3,19 @@ angular.module( 'stantza', ['ngRoute', 'ngAnimate'] )
     function ( $routeProvider, $locationProvider ) {        
         $routeProvider
         .when( '/home', {
-            templateUrl: 'home.php'
+            templateUrl: 'home.html'
         } )
         .when( '/samples', {
-            templateUrl: 'samples.php'
+            templateUrl: 'samples.html'
         } )
         .when( '/shop', {
-            templateUrl: 'shop.php'
+            templateUrl: 'shop.html'
         } )
         .when( '/clients', {
-            templateUrl: 'clients.php'
+            templateUrl: 'clients.html'
         } )
         .when('/contact', {
-            templateUrl: 'contact.php'
+            templateUrl: 'contact.html'
         } )
         .otherwise( {
             redirectTo: '/home'
